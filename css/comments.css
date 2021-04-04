@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #efeeee;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  color: #383754;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+h3 {
+  margin: 0;
+  color: #636369;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #636369;
+}
+
+#loading {
+  position: absolute;
+  background-color: #efeeee;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  font-family: "Montserrat", sans-serif;
+  color: #383754;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 5;
+}
+
+#loading img {
+  height: 200px;
+}
+
+.comments-sec {
+  border: solid 1px rgb(207, 206, 206);
+  margin: 20px;
+  border-radius: 15px;
+}
+
+.fb-button {
+  text-align: right;
+}
+
+.fb-button a {
+  margin-right: 5px;
+}
+
+.back-home {
+  text-align: center;
+}
+
+.back-home button {
+  border-radius: 40px;
+  border-width: 3px;
+}
+
+.qr-img {
+  height: 150px;
+}

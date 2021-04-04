@@ -1,0 +1,23 @@
+  
+{
+  "name": "gradeVITian.in",
+  "short_name": "gradeVITian",
+  "start_url": ".",
+  "background_color": "#efeeee",
+  "theme_color": "#ffffff",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "LOGO-192px.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "LOGO-512px.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+/* ------------------------------------  POP UP ----------------------------------------------- */
+
+.full-screen {
+  position: absolute;
+  z-index: 1;
+  left: 10%;
+  right: 10%;
+  top: 10%;
+  bottom: 10%;
+  background-color: #efeeee;
+  border: solid 3px #383754;
+  border-radius: 10px;
+}
+
+.pop-up-close-icon {
+  position: absolute;
+  top: 1.8%;
+  right: 1%;
+  cursor: pointer;
+}
+
+.pop-up-close-button {
+  position: absolute;
+  bottom: 1.8%;
+  right: 0.9%;
+  border-radius: 30px;
+}
+
+.result-img {
+  position: absolute;
+  top: 1.8%;
+  text-align: center;
+  height: 120px;
+}
+
+.pop-up-watermark {
+  position: absolute;
+  bottom: 0.4%;
+  left: 1%;
+  font-family: "Pacifico", cursive;
+  color: #b7b7b9;
+}
+
+.flex-container-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.full-screen {
+  font-family: "Montserrat", sans-serif;
+  color: #50505e;
+}
+
+.hidden {
+  display: none;
+}
+
+/* --------------------------------------   SECTION-2    --------------------------------------- */
+/* Gradepredictor section */
+
+.section2 {
+  padding: 270px 10px 0px 10px;
+}
+
+.gpacal-sec {
+  width: 100%;
+  background-color: #efeeee;
+  border-radius: 15px;
+  border: solid 1px rgb(207, 206, 206);
+  /* box-shadow: 10px 10px 16px -2px #ccc, -10px -10px 16px -2px #fff; */
+  position: relative;
+}
+
+.gpacal-sec h2 {
+  font-family: "Fira Sans", sans-serif;
+  color: #383754;
+  font-weight: bold;
+  text-align: center;
+}
+
+.course-division {
+  margin: 0px 8px 0px 8px;
+}
+
+.course-division-dark-variant {
+  background-color: #e4dfdf;
+}
+
+form h5 {
+  font-family: "Montserrat", sans-serif;
+  color: #383754;
+  text-align: center;
+  font-weight: bold;
+}
+
+form h6 {
+  font-family: "Montserrat", sans-serif;
+  color: #383754;
+  text-align: center;
+}
+
+.gpainputimg {
+  position: absolute;
+  top: 5px;
+  right: 50px;
+  height: 130px;
+}
+
+select {
+  width: 170px;
+  outline: none;
+  display: block;
+  border-radius: 5000px;
+  text-align: center;
+  padding: 0.6em;
+  margin: 0 auto;
+  background: #efeeee;
+  border: solid 0.1px rgb(224, 224, 224);
+  -webkit-appearance: none;
+  -moz-box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
+  -webkit-box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
+  box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
+  margin-bottom: 1em;
+  color: rgb(58, 56, 56);
+}
+
+input {
+  display: block;
+  text-align: center;
+  border: solid 0.1px rgb(224, 224, 224);
+  -webkit-appearance: none;
+  -moz-box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
+  -webkit-box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
+  box-shadow: inset 4px 4px 6px #ccc, inset -4px -4px 6px #fff;
+  outline: none;
+  padding: 5px 10px;
+  background-color: #efeeee;
+  border-radius: 30px;
+  margin: 0 auto;
+  width: 100px;
+}
+
+.compute-btn {
+  padding-top: 40px;
+  padding-bottom: 10px;
+}
+
+.compute-btn .btn1,
+.compute-btn .btn2 {
+  border-radius: 40px;
+  border-width: 4px;
+}
+.compute-btn {
+  text-align: right;
+  margin-right: 1%;
+}
+
+/* ---------------------------------------------MOBILE---------------------------------------- */
+@media screen and (max-width: 359px) {
+  .pop-up-close-icon {
+    position: absolute;
+    top: 0.8%;
+    right: 1.15%;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+  }
+
+  .result-img {
+    position: absolute;
+    top: 1.8%;
+    text-align: center;
+    height: 100px;
+  }
+
+  .pop-up-watermark {
+    position: absolute;
+    bottom: 0.4%;
+    left: 2%;
+    font-family: "Pacifico", cursive;
+    color: #b7b7b9;
+  }
+
+  .section2 {
+    padding-top: 80px;
+  }
+
+  .gpainputimg {
+    display: none;
+  }
+
+  input,
+  select {
+    width: 67px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 500px) {
+  .pop-up-close-icon {
+    position: absolute;
+    top: 0.8%;
+    right: 1.15%;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+  }
+
+  .result-img {
+    position: absolute;
+    top: 1.8%;
+    text-align: center;
+    height: 100px;
+  }
+
+  .pop-up-watermark {
+    position: absolute;
+    bottom: 0.4%;
+    left: 2%;
+    font-family: "Pacifico", cursive;
+    color: #b7b7b9;
+  }
+
+  /* -------------------------------------SECTION-2---------------------------------------------- */
+  .section2 {
+    padding-top: 80px;
+  }
+
+  .gpainputimg {
+    display: none;
+  }
+
+  input,
+  select {
+    width: 82px;
+  }
+}
+
+/* ------------------------------------    TABLET     -------------------------------------------- */
+@media screen and (min-width: 500px) and (max-width: 700px) {
+  .pop-up-close-icon {
+    position: absolute;
+    top: 0.8%;
+    right: 1.15%;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+  }
+
+  .result-img {
+    position: absolute;
+    top: 1.8%;
+    text-align: center;
+    height: 110px;
+  }
+
+  .pop-up-watermark {
+    position: absolute;
+    bottom: 0.4%;
+    left: 2%;
+    font-family: "Pacifico", cursive;
+    color: #b7b7b9;
+  }
+
+  /* -----------------------------------SECTION-2-------------------------------------------- */
+  .section2 {
+    padding-top: 280px;
+  }
+
+  .gpainputimg {
+    display: none;
+  }
+
+  input,
+  select {
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1024px) {
+  /* -----------------------------------SECTION-2-------------------------------------------- */
+  .pop-up-close-icon {
+    position: absolute;
+    top: 0.8%;
+    right: 1.15%;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+  }
+
+  .result-img {
+    position: absolute;
+    top: 1.8%;
+    text-align: center;
+    height: 120px;
+  }
+
+  .pop-up-watermark {
+    position: absolute;
+    bottom: 0.4%;
+    left: 2%;
+    font-family: "Pacifico", cursive;
+    color: #b7b7b9;
+  }
+
+  .section2 {
+    padding-top: 200px;
+  }
+
+  .gpainputimg {
+    right: 2px;
+    height: 100px;
+  }
+
+  input,
+  select {
+    width: 100px;
+  }
+}
