@@ -324,7 +324,7 @@ elseif($_GET["reset"] == "failed"){
 <br>
 
 <p><a href="includes/reset-password.php" style="color:#556B2F;">Forgot Password</a></p>
-<p>Loging in signifies that you have signed up by reading and accepting to the  <a href="Terms and Conditions.php">Terms and Conditions <i class="fas fa-external-link-alt"></i></a> and our <a href="Privacy Policy.php">Privacy Policy <i class="fas fa-external-link-alt"></i></a>.</p>
+<p>Logging in signifies that you have signed up by reading and accepting to the  <a href="Terms and Conditions.php">Terms and Conditions <i class="fas fa-external-link-alt"></i></a> and our <a href="Privacy Policy.php">Privacy Policy <i class="fas fa-external-link-alt"></i></a>.</p>
 
 
 </div>
