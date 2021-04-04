@@ -34,7 +34,7 @@ method="post" target="hidden_iframe" onsubmit="validatedetails()">
     <div>
       
         <h6 >Name : </h6>
-      <input type="text" id="Name" name="entry.946033457" placeholder="Your good name..." value="">
+      <input type="text" id="Name" name="entry.946033457" placeholder="Your good name..." value="" onkeypress='return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode == 32))'>
     </div>
 
 
