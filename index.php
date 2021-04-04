@@ -283,7 +283,7 @@ session_destroy();
 <img class="welcome-img" src="img/welcome-img.svg" alt="welcome">
 <br>
 <form action="includes/signup-inc.php" method="post" > 
-<input type="text" name="name" placeholder="Full Name..." value="">
+<input type="text" name="name" placeholder="Full Name..." value="" onkeypress='return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode == 32))'>
 <input type="email" name="email" placeholder="Email Id..." value="">
 <input type="text" name="uid" placeholder="Username..." value="">
 <input type="password" name="pwd" placeholder="Password..." value="">
