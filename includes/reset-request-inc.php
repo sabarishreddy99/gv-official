@@ -1,9 +1,14 @@
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+
+include_once "PHPMailer/PHPMailer.php";
+include_once "PHPMailer/Exception.php";
+include_once "PHPMailer/SMTP.php";
+
 require_once 'dbh-inc.php';
 
 
-$template_file = "./email-template.php";
 
 
 if(isset($_POST['reset-request-submit'])){
@@ -12,7 +17,7 @@ if(isset($_POST['reset-request-submit'])){
 
   $token = random_bytes(32);
 
-  $url = "http://gv-official-test.herokuapp.com/includes/create-new-password.php?selector=". $selector ."&validator=". bin2hex($token);
+  $url = "http://localhost/gv-official/includes/create-new-password.php?selector=". $selector ."&validator=". bin2hex($token);
 
   $expires = date("U") + 1800;
 
@@ -97,41 +102,81 @@ mysqli_stmt_execute($stmt1);
 
 
 
-// // --------Creating the html message ------------------------
-//     $message;
-// if(file_exists($template_file)){
-  
 
-//   $message = file_get_contents($template_file);
-
-  
-
-// }
-
-// else{
-//   die("unable to locate the template file.");
-// }
 
 
   $message = "<h3 style='text-align:center; color: #383754;text-decoration: none;'>gradevitian.in</h3>";
-  $message .= "<p></p>We received a password reset request. The link to reset your password is below. If you didn't make this request, Kindly ignore this email.</p>";
+
+  $message .= '<p style="text-align:left;">Hello,</p>';
+
+  $message .= "<p></p>We have received a password reset request from your account. The link to reset your password is below. If you didn't make this request, Kindly ignore this email.</p>";
 
   $message .= "<p>Here is your password reset link: </br>";
 
   $message .= '<a href="' . $url . '">' . $url . '</a></p>';
 
+  $message .= '<p style="text-align:left;">Thanks,<br>gradeVITian.</p>';
 
 
- if( mail($to, $subject, $message, $headers)){
-  header("location: reset-password.php?reset=success");
- }
- else{
-  header("location: ../login.php?reset=failed");
-  //  echo "mail send failed";
- }
+$mail = new PHPMailer();
+
+
+//Enable SMTP debugging.
+$mail->SMTPDebug = 3;                               
+//Set PHPMailer to use SMTP.
+$mail->isSMTP();            
+//Set SMTP host name                          
+$mail->Host = "smtp.gmail.com";
+//Set this to true if SMTP host requires authentication to send email
+$mail->SMTPAuth = true;                          
+//Provide username and password     
+$mail->Username = "gradevitian@gmail.com";                 
+$mail->Password = "cjyrmpyunadobjqq";                           
+//If SMTP requires TLS encryption then set it
+$mail->SMTPSecure = "ssl"; //TLS                          
+//Set TCP port to connect to
+$mail->Port = 465;      //587                             
+
+$mail->From = "gradevitian@gmail.com";
+$mail->FromName = "gradeVITian";
+
+$mail->addAddress($to);
+
+$mail->isHTML(true);
+
+$mail->Subject = $subject;
+$mail->Body = $message;
+$mail->AltBody = "";
+
+try {
+    $mail->send();
+    header("location: reset-password.php?reset=success");
+} catch (Exception $e) {
+     header("location: ../login.php?reset=failed");
+}
+
+
+
+
+
+
+
+
+
+//-------------------------DEFAULT MAIL FUNCTION---------------
+
+//  if( mail($to, $subject, $message, $headers)){
+//   header("location: reset-password.php?reset=success");
+//  }
+//  else{
+//   header("location: ../login.php?reset=failed");
+//   //  echo "mail send failed";
+//  }
 
 
 }
+
+
 else{
   header("location: ../reset-password.php?reset=failed"); 
 }
