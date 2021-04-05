@@ -1,25 +1,70 @@
-
-
 // Incrementing OFFLINE_VERSION will kick off the install event and force
 // previously cached resources to be updated from the network.
 const OFFLINE_VERSION = 1;
 const CACHE_NAME = "offline";
 // Customize this with a different URL if needed.
-const OFFLINE_URL = "index.html";
+const OFFLINE_URL = "../index.php";
 
-self.addEventListener('install', function (event) {
+self.addEventListener("install", function (event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
-      return cache.addAll(
-        [
-          'index.html','index.js','index.css','CGPA Calculator.css','CGPA Calculator.js','GPA Calculator.html','GPA Calculator.css','GPA Calculator.js','Grade Predictor.html','Grade Predictor.css','Grade Predictor.js','CGPA Estimator.html','CGPA Estimator.css','CGPA Estimator.js','Attendance Calculator.html','Attendance Calculator.css','Attendance Calculator.js','comments.html','comments.css','comments.js','comments.svg','attendance-cal-2 -inpimg.svg','attendance-inp-img.svg','devices.svg','explore.svg','feedback.svg','gpaimg.svg','growth.svg','improve.svg','instant-cgpaimg.svg','intro-img.svg','loading.svg','male-avtar.svg','result pop-up.svg','target.svg','weightage-conv.svg','winner.svg','LOGO-512px.png','LOGO-192px.png','sabari-avtar.jpg','manifest.json','add2homescreen-img.svg','main.js','bootstrap.min.css','bootstrap.min.js'
-        ]
-      );
+      return cache.addAll([
+        "../index.php",
+        "index.js",
+        "../css/index.css",
+        "../css/signup.css",
+        "../login.php",
+        "../css/login.css",
+        "../CGPA Calculator.php",
+        "CGPA Calculator.js",
+        "../css/CGPA Calculator.css",
+        "../GPA Calculator.php",
+        "GPA Calculator.js",
+        "../css/GPA Calculator.css",
+        "../Grade Predictor.php",
+        "Grade Predictor.js",
+        "../css/Grade Predictor.css",
+        "../CGPA Estimator.php",
+        "CGPA Estimator.js",
+        "../css/CGPA Estimator.css",
+        "../Attendance Calculator.php",
+        "Attendance Calculator.js",
+        "../css/Attendance Calculator.css",
+        "../comments.php",
+        "../css/comments.css",
+        "comments.js",
+        "../img/comments.svg",
+        "../img/attendance-cal-2 -inpimg.svg",
+        "../img/attendance-inp-img.svg",
+        "../img/devices.svg",
+        "../img/explore.svg",
+        "../img/feedback.svg",
+        "../img/gpaimg.svg",
+        "../img/growth.svg",
+        "../img/improve.svg",
+        "../img/instant-cgpaimg.svg",
+        "../img/intro-img.svg",
+        "../img/loading.svg",
+        "../img/male-avtar.svg",
+        "../img/result pop-up.svg",
+        "../img/target.svg",
+        "../img/weightage-conv.svg",
+        "../img/winner.svg",
+        "../img/LOGO-512px.png",
+        "../img/LOGO-192px.png",
+        "../img/sabari-avtar.jpg",
+        "../manifest.json",
+        "../img/add2homescreen-img.svg",
+        "../img/signup-img.svg",
+        "../img/login-img.svg",
+        "../img/welcome-img.svg",
+        "main.js",
+        "../css/bootstrap.min.css",
+        "bootstrap.min.js",
+      ]);
     })
   );
 });
-
-
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
