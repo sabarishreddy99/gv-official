@@ -17,7 +17,7 @@ if(isset($_POST['reset-request-submit'])){
 
   $token = random_bytes(32);
 
-  $url = "http://localhost/gv-official/includes/create-new-password.php?selector=". $selector ."&validator=". bin2hex($token);
+  $url = "https://gv-official-test.herokuapp.com/includes/create-new-password.php?selector=". $selector ."&validator=". bin2hex($token);
 
   $expires = date("U") + 1800;
 
